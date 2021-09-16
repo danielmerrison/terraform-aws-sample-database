@@ -11,7 +11,7 @@ resource "aws_db_instance" "this" {
   engine_version       = "10.5"
   instance_class       = "db.t3.micro"
   username             = var.username
-  password             = var.password ? var.password : random_password.password
+  password             = var.password == "<random_value>" ? random_password.password : var.password
   parameter_group_name = "default.mariadb10.5"
   skip_final_snapshot  = true
   publicly_accessible  = true
