@@ -19,4 +19,5 @@ variable "password" {
   type        = string
   description = "Password to use when creating the database (If not specified a random string will be used)"
   sensitive   = true
+  default     = "<random_value>"
 }
